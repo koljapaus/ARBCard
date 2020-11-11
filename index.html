@@ -46,27 +46,16 @@
       </a-assets>
 
       <!-- set marker -->
-        <a-nft
-      type="nft"
-      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-               markerhandler
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse"
-        preset="custom"
-    >
         
-      
-      <!--   markerhandler
+        
+      <a-marker
+        markerhandler
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse"
         preset="custom"
         type="pattern"
         url="assets/marker/pattern-qrcode.patt"
-      
+      >
         <!-- glb -->
         <a-entity
           gltf-model="#glb"
@@ -238,7 +227,7 @@
           ></a-triangle>
           </a-entity>
         </a-entity>
-        </a-nft>
+      </a-marker>
       <!-- AR camera -->
       <a-entity camera></a-entity>
     </a-scene>
