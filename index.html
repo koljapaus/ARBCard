@@ -9,16 +9,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>AR Business Card - Kolja Paus</title>
     <!-- A-frame -->
-    <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
-
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <!-- AR.js -->
-    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
   </head>
 
   <body style="margin : 0px; overflow: hidden;">
     <a-scene
       embedded
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled:false;"
+      arjs="debugUIEnabled:false;"
       renderer="gammaOutPut: true;"
       vr-mode-ui="enabled: false"
     >
@@ -55,14 +54,13 @@
       <!-- set marker -->
         
         
-      <a-nft
+      <a-marker
         markerhandler
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse"
         preset="custom"
-        type="nft"
-        url="assets/marker/trex"
-             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+        type="pattern"
+        url="assets/marker/pattern-qrcode.patt"
       >
         <!-- glb -->
         <a-entity
@@ -267,7 +265,7 @@
           ></a-triangle>
           </a-entity>
         </a-entity>
-      </a-nft>
+      </a-marker>
       <!-- AR camera -->
       <a-entity camera></a-entity>
     </a-scene>
