@@ -46,14 +46,15 @@
       </a-assets>
 
       <!-- set marker -->
-      <a-marker
-        markerhandler
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse"
-        preset="custom"
-        type="pattern"
-        url="assets/marker/pattern-qrcode.patt"
-      >
+        <a-nft
+      type="nft"
+      url="assets/markerimg/yes"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      
         <!-- glb -->
         <a-entity
           gltf-model="#glb"
@@ -225,7 +226,7 @@
           ></a-triangle>
           </a-entity>
         </a-entity>
-      </a-marker>
+        </a-nft>
       <!-- AR camera -->
       <a-entity camera></a-entity>
     </a-scene>
